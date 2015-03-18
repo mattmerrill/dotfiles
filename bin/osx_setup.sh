@@ -269,11 +269,17 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Move dock to right
 defaults write com.apple.dock orientation -string "right"
 
-# Enable highlight hover effect for the grid view of a stack (Dock)
-defaults write com.apple.dock mouse-over-hilite-stack -bool true
+# Disable highlight hover effect for the grid view of a stack (Dock)
+defaults write com.apple.dock mouse-over-hilite-stack -bool false
 
 # Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock tilesize -int 30
+
+# Enable magnification
+defaults write com.apple.dock magnification -bool true
+
+# Magnification size
+defaults write com.apple.dock largesize -int 84
 
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
@@ -302,8 +308,8 @@ defaults write com.apple.dock expose-animation-duration -float 0.15
 # (i.e. use the old Exposé behavior instead)
 #defaults write com.apple.dock expose-group-by-app -bool false
 
-# Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
+# Don’t show Dashboard as a Space TODO: doesn't work
+#defaults write com.apple.dock dashboard-in-overlay -bool true 
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
@@ -359,8 +365,8 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 defaults write com.apple.dock wvous-bl-corner -int 4
 defaults write com.apple.dock wvous-bl-modifier -int 0
 # Bottom right screen corner → Show Dashboard
-defaults write com.apple.dock wvous-bl-corner -int 7
-defaults write com.apple.dock wvous-bl-modifier -int 0
+defaults write com.apple.dock wvous-br-corner -int 7
+defaults write com.apple.dock wvous-br-modifier -int 0
 
 
 ###############################################################################
